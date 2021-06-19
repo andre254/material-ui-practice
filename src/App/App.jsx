@@ -1,7 +1,7 @@
 import Sidebar from '../components/sidebar/Sidebar'
 import Header from '../components/header/Header'
 import './app.css'
-import { makeStyles } from '@material-ui/core'
+import { CssBaseline, makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles ({
   appMain: {
@@ -18,8 +18,10 @@ const App = () => {
   return (
     <>
       <Sidebar/>
+      <div className={classes.appMain}>
       <Header/>
-      <div className={classes.appMain}></div>
+      </div>
+      <CssBaseline/>
     </>
   )
 }
